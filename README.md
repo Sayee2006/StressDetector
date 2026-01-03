@@ -77,3 +77,7 @@ This project is for educational purposes only and is not intended for medical di
 
 Author
 Developed by Sayee Arwalkar,Akanksha Parkhe,Pawani Gahoi
+
+## 📜 License
+This project is licensed under the MIT License.
+
