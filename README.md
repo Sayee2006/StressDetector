@@ -1,53 +1,79 @@
-# StressDetector
-Stress Detector Web Application
+# 🧠 Stress Detector Web Application
 
-A real-time Stress Detection Web App that uses computer vision to analyze facial movements through a webcam and estimate stress levels.
-The application categorizes stress into calm, tensed, and highly stressed states, provides suggestions, and maintains stress history.
+A web-based stress detection application that analyzes facial movements using a webcam to estimate stress levels. The system categorizes stress into calm, tensed, and highly stressed states and provides useful feedback to the user.
 
-✨ Features
-🎥 Live Camera Capture
-⏱️ 30-second automatic stress analysis
-🛑 Manual Stop Camera option
-📊 Stress Level Detection
-🎨 Color-coded stress indicator
-💡 Personalized stress suggestions
-📈 Average Stress Calculation
-⏰ Last Check Timestamp
-🗂️ History of last 50 stress records
-🌙 Dark theme UI
+---
 
-Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/stress-detector.git
-cd stress-detector
+## ✨ Features
 
-2️⃣ Install Dependencies
+- Live webcam-based stress detection
+- 30-second automatic stress analysis
+- Start and Stop camera controls
+- Stress level classification:
+  - 🙂 Calm / Smiling → 0–40%
+  - 😐 Tensed → 50–70%
+  - 😣 Highly stressed / excessive blinking → 80–100%
+- Color-coded stress indicator
+- Stress reduction suggestions
+- Average stress calculation
+- Last check timestamp
+- History of last 50 stress records
+- Dark theme user interface
+
+---
+
+## 🛠️ Technologies Used
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Python, Flask  
+- **Computer Vision:** MediaPipe  
+- **Database:** SQLite  
+- **Libraries:** NumPy, PIL  
+
+---
+
+## 📁 Project Structure
+
+StressDetector/
+│
+├── app.py
+├── stress.db
+│
+├── templates/
+│ ├── index.html
+│ ├── history.html
+│ └── settings.html
+│
+├── static/
+│ ├── style.css
+│ └── script.js
+
+🚀 How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sayee2006/StressDetector.git
+   cd StressDetector
+Install dependencies:
+Copy code
 pip install flask flask-sqlalchemy mediapipe numpy pillow pytz
 
-3️⃣ Run the Application
+Run the application:
+Copy code
 python app.py
-
-4️⃣ Open in Browser
+Open in browser:
+Copy code
 http://localhost:5000
 
--How It Works
-1)User clicks Start Camera
-2)Webcam runs for 30 seconds
-3)Facial landmarks (nose movement) are tracked using MediaPipe
-4)Movement intensity is analyzed:
-5)Final stress score is calculated
-6)UI updates
-7)Stress value is stored in the database
+How It Works
+The webcam captures video frames for 30 seconds
+Facial landmarks are detected using MediaPipe
+Facial movement intensity is analyzed
+Stress level is calculated based on movement patterns
+Results are displayed with suggestions and saved to history
 
-🧪 Known Limitations
-.Stress is inferred from facial movement (not medical-grade)
-.Lighting conditions can affect accuracy
-.Not a substitute for professional diagnosis
+Note
+This project is for educational purposes only and is not intended for medical diagnosis.
 
-🌱 Future Enhancements
-.Eye blink detection (true blink rate)
-.Emotion recognition
-.Stress trend charts
-.Calibration mode
-.Breathing animation guidance
-.Mobile optimization
+Author
+Developed by Sayee Arwalkar,Akanksha Parkhe,Pawani Gahoi
