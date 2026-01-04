@@ -134,3 +134,41 @@ video {
 #saveBtn:hover {
     background-color: #1976d2;
 }
+
+
+nav {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Default nav links */
+nav a {
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #e5e7eb;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Active page */
+nav a.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #22d3ee, #2563eb);
+  box-shadow: 0 0 22px rgba(34, 211, 238, 0.9);
+  border: none;
+}
+
